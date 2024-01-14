@@ -1,0 +1,29 @@
+body {
+  background-color: #7ab6f5;
+  font-family: "Roboto", sans-serif;
+}
+#app {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px auto;
+  width: 75%;
+  text-align: center;
+}
+
+#startButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin: 10px;
+  grid-column: 2; /* If you're using a grid layout */
+}
