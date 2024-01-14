@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 
-#startButton {
+#toGameScreen {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #007bff;
@@ -26,4 +26,8 @@ body {
   cursor: pointer;
   margin: 10px;
   grid-column: 2; /* If you're using a grid layout */
+}
+#startButton:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
