@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let timer;
 
   const displayTimer = () => {
+    timerElement.style.color = "black"; // reset color
     remainingTime--;
     timerElement.innerHTML = remainingTime;
+    if (remainingTime <= 5 && remainingTime > 0) {
+      timerElement.style.color = "red";
+    }
     if (remainingTime === 0) {
       clearInterval(timer);
       isStopped = true;
