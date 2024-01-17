@@ -4,6 +4,7 @@ const questionAndAnswer = document.getElementById("questionAndAnswer");
 const answerInput = document.getElementById("userAnswer");
 const validOperands = ["+", "-", "*", "/"];
 questionAndAnswer.style.display = "none";
+let prompt = [];
 let score = 0;
 
 export const isDivisible = (numOne, numTwo) => {
@@ -48,25 +49,29 @@ export const generatePrompt = () => {
 };
 
 export const displayPrompt = () => {
-  const prompt = generatePrompt();
+  prompt = generatePrompt();
   promptElement.innerHTML = prompt[0];
 };
 
 export const startGame = () => {
   questionAndAnswer.style.display = "block";
   timerModules.startTimer();
-  while (!timerModules.gameStarted) {
-    displayPrompt();
-    answerInput.addEventListener("keypress", (e) => {
-      if (e.key === "enter") {
-        e.preventDefault();
-        const userAnswer = answerInput.value;
-        if (checkAnswer(userAnswer, prompt[1])) {
-          score++;
-        }
-        answerInput = "";
-        generatePrompt();
-      }
-    });
+  displayPrompt();
+};
+
+export const checkAnswer = (userInput) => {
+  if (userInput === prompt[1]) {
+    score++;
+    document.getElementById("score").innerHTML = score;
   }
 };
+answerInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    if (answerInput.value !== "") {
+      let userInput = parseInt(answerInput.value);
+      checkAnswer(userInput);
+      answerInput.value = "";
+    }
+    displayPrompt();
+  }
+});
