@@ -1,44 +1,46 @@
 body {
-  background-color: #e8f1f5;
+  background-color: #2f3445;
   font-family: "Arial", sans-serif;
+  color: #f6ecf3;
 }
-#gameName {
-  font-size: 40px;
-  margin: 0;
-  padding: 0;
-}
+
 #app {
-  color: #003366;
-  margin: auto 0;
+  color: #2f3445;
   text-align: center;
-  top: 50%;
-  transform: translateY(50%);
 }
 
 #toGameScreen {
+  color: #f6ecf3;
   border-radius: 6px;
   font-size: 34px;
   border: none;
   width: 150px;
-  background-color: #ffa500;
+  background-color: #13b0b8;
   padding: 10px;
   margin: 5px;
 }
 #toGameScreen:hover {
   cursor: grab;
-  transition: 1s;
-  background-color: #ffc252;
+  transition: 0.5s;
+  background-color: #53bdd5;
 }
 .instructions {
-  background-color: #50585b;
+  border-radius: 10px;
+  color: #f6ecf3;
+  background-color: #181823;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
 }
 .gameName {
   text-align: center;
-  size: 150px;
+  font-size: 100px;
+  font-weight: bold;
 }
 #questionAndAnswer {
   display: none;
-}
-footer {
-  transform: translateY(75%);
 }
