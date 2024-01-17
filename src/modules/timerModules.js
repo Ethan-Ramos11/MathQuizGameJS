@@ -1,7 +1,7 @@
 let remainingTime = 30;
-export let gameStarted = true;
 let timer;
 const timerElement = document.getElementById("gameTimer");
+import * as gameLogic from "./gameLogic.js";
 
 export const displayTimer = () => {
   timerElement.style.color = "black"; // reset color
@@ -13,15 +13,15 @@ export const displayTimer = () => {
   if (remainingTime === 0) {
     clearInterval(timer);
     questionAndAnswer.style.display = "none";
-    gameStarted = true;
     remainingTime = 30;
+    gameLogic.currGameData.gameStarted = false;
   }
 };
 
 export const startTimer = () => {
-  if (gameStarted) {
+  if (gameLogic.currGameData.gameStarted === true) {
     timer = setInterval(displayTimer, 1000);
-    gameStarted = false;
+    gameLogic.currGameData.gameStarted = false;
     timerElement.innerHTML = remainingTime;
   }
 };
