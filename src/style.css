@@ -36,6 +36,9 @@ body {
   text-align: center;
   size: 150px;
 }
+#questionAndAnswer {
+  display: none;
+}
 footer {
   transform: translateY(75%);
 }
