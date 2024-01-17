@@ -11,6 +11,8 @@ body {
   color: #003366;
   margin: auto 0;
   text-align: center;
+  top: 50%;
+  transform: translateY(50%);
 }
 
 #toGameScreen {
@@ -19,7 +21,21 @@ body {
   border: none;
   width: 150px;
   background-color: #ffa500;
+  padding: 10px;
+  margin: 5px;
 }
-#startButton:hover {
-  cursor: ;
+#toGameScreen:hover {
+  cursor: grab;
+  transition: 1s;
+  background-color: #ffc252;
+}
+.instructions {
+  background-color: #50585b;
+}
+.gameName {
+  text-align: center;
+  size: 150px;
+}
+footer {
+  transform: translateY(75%);
 }
