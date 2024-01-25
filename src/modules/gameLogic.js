@@ -4,7 +4,7 @@ const questionAndAnswer = document.getElementById("questionAndAnswer");
 const answerInput = document.getElementById("userAnswer");
 const validOperands = ["+", "-", "*", "/"];
 questionAndAnswer.style.display = "none";
-
+document.getElementById("score").style.display = "none";
 export const currGameData = {
   gameStarted: false,
   currentPromptAndAnswer: [],
@@ -72,6 +72,7 @@ export const checkAnswer = (userInput) => {
 
 export const startGame = () => {
   if (currGameData.gameStarted === false) {
+    document.getElementById("score").style.display = "block";
     currGameData.gameStarted = true;
     questionAndAnswer.style.display = "block";
     timerModules.startTimer();

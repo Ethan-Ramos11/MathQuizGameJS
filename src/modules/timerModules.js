@@ -2,10 +2,9 @@ import * as gameLogic from "./gameLogic.js";
 import * as main from "../main.js";
 let remainingTime = 30;
 let timer;
-const timerElement = document.getElementById("gameTimer");
-
+export const timerElement = document.getElementById("gameTimer");
+timerElement.style.display = "none";
 export const displayTimer = () => {
-  timerElement.style.color = "black"; // reset color
   remainingTime--;
   timerElement.innerHTML = remainingTime;
   if (remainingTime <= 5 && remainingTime > 0) {

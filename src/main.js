@@ -8,5 +8,6 @@ export const displayStartButton = () => {
 };
 startButton.addEventListener("click", () => {
   startButton.style.display = "none";
+  timerModules.timerElement.style.display = "block";
   gameLogic.startGame();
 });

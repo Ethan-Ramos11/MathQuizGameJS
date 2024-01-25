@@ -35,6 +35,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 25px;
+  max-width: 50%;
 }
 .gameName {
   text-align: center;
@@ -43,4 +44,10 @@ body {
 }
 #questionAndAnswer {
   display: none;
+}
+
+#gameTimer {
+  text-align: left;
+  font-size: 50px;
+  font-weight: bold;
 }
