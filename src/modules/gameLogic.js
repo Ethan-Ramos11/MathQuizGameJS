@@ -66,7 +66,7 @@ export const displayPrompt = () => {
 export const checkAnswer = (userInput) => {
   if (userInput === currGameData.currentPromptAndAnswer[1]) {
     currGameData.score++;
-    document.getElementById("score").innerHTML = currGameData.score;
+    document.getElementById("score").innerHTML = `Score: ${currGameData.score}`;
   }
 };
 

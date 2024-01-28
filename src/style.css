@@ -8,21 +8,37 @@ body {
   color: #2f3445;
   text-align: center;
 }
-
-#toGameScreen {
+#playScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
   color: #f6ecf3;
-  border-radius: 6px;
-  font-size: 34px;
-  border: none;
-  width: 150px;
   background-color: #13b0b8;
+  border: none;
+  border-radius: 6px;
+}
+#toGameScreen {
+  font-size: 34px;
+  width: 150px;
   padding: 10px;
   margin: 5px;
 }
-#toGameScreen:hover {
-  cursor: grab;
+#toGameScreen,
+#startGameButton:hover {
   transition: 0.5s;
+  cursor: grab;
   background-color: #53bdd5;
+}
+
+#startGameButton {
+  display: block;
+  margin: auto;
+  width: 200px;
+  font-size: 34px;
+  padding: 10px;
+  margin: 5px;
 }
 .instructions {
   border-radius: 10px;
@@ -39,15 +55,45 @@ body {
 }
 .gameName {
   text-align: center;
-  font-size: 100px;
+  font-size: 50px;
   font-weight: bold;
 }
 #questionAndAnswer {
-  display: none;
+  display: flex;
+  text-align: center;
 }
 
 #gameTimer {
   text-align: left;
   font-size: 50px;
+  font-weight: bold;
+  padding-top: 0px auto;
+}
+
+#question {
+  border-radius: 10px;
+  color: #f6ecf3;
+  background-color: #181823;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  font-size: 50px;
+}
+
+#score {
+  text-align: right;
+  font-size: 50px;
+}
+
+#userAnswer,
+label {
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 3px;
+  padding: 5px;
   font-weight: bold;
 }
