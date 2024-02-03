@@ -1,5 +1,5 @@
 import * as gameLogic from "./gameLogic.js";
-let remainingTime = 10000000000000;
+let remainingTime = 30;
 let timer;
 export const timerElement = document.getElementById("gameTimer");
 timerElement.style.display = "none";
@@ -14,6 +14,7 @@ export const displayTimer = () => {
     remainingTime = 30;
     gameLogic.currGameData.gameStarted = false;
     window.location.href = "results.html";
+    gameLogic.displayScore();
   }
 };
 
